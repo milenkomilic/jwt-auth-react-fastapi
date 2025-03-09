@@ -5,7 +5,7 @@ Este proyecto implementa un sistema de autenticación basado en JSON Web Tokens 
 ## Descripción
 
 - **Frontend**: Desarrollado con React, utiliza `react-router-dom` para la navegación y gestiona la autenticación del usuario mediante un formulario de login. Los tokens JWT se almacenan en `localStorage` y se verifican antes de acceder a rutas protegidas.
-- **Backend**: Construido con FastAPI, incluye endpoints para generar y verificar tokens JWT, utilizando una base de datos SQLite con SQLAlchemy para almacenar datos (si corresponde).
+- **Backend**: Construido con FastAPI, incluye endpoints para generar y verificar tokens JWT, utilizando una base de datos SQLite con SQLAlchemy para almacenar datos.
 - **Características**:
   - Formulario de login con validación básica.
   - Ruta protegida que verifica el token JWT.
@@ -97,7 +97,3 @@ jwt-auth-react-fastapi/
 │       └── package.json
 ├── README.md              # Este archivo
 ```
-### Configuración Adicional
-- Backend: Asegúrate de que el endpoint /token en main.py esté configurado para generar tokens JWT y que /verify-token/{token} verifique los tokens.
-- Seguridad: Actualmente, los tokens se almacenan en localStorage, lo cual es vulnerable a ataques XSS. Considera usar cookies HTTP-only en producción.
-- Base de Datos: Si necesitas persistencia, configura un esquema de base de datos en database.py y migra los modelos.
