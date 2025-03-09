@@ -1,0 +1,19 @@
+# Entorno virtual (backend)
+venv/
+
+# Dependencias de Node.js (frontend)
+frontend/auth-app/node_modules/
+
+# Archivos generados por el backend
+backend/test.db
+
+# Archivos de compilación y caché
+*.pyc
+__pycache__/
+
+# Archivos de configuración de editores
+.vscode/
+.idea/
+
+# Archivos de lock generados por npm
+frontend/auth-app/package-lock.json
